@@ -1,3 +1,559 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*NAVBAR LOOK*/
+
+// * { box-sizing: border-box; }
+//
+// * {
+//     outline: 1px solid red;
+// }
+
+#navbar {
+  z-index: 999;
+  width: 100%;
+  background-color: #ff0;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0;
+}
+
+#nav-fluid {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.mdmix>a, .mdmix>a:visited, #new-articles>a, #new-articles>a:visited, #articles-title>a, #articles-title>a:visited, .links-articles>a, .links-articles>a:visited  {
+  z-index: 500;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  position: relative;
+  left: 0.9em;
+  top: 0.1em;
+  transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;/* Safari */
+}
+
+#articles-title>a, #articles-title>a:visited, .links-articles>a, .links-articles>a:visited  {
+  color: #ff0;
+  letter-spacing: 0.26em;
+}
+
+#new-articles>a, #new-articles>a:visited {
+  color: #fff;
+}
+
+.mdmix>a:hover, #new-articles>a:hover {
+  text-decoration-line: underline;
+  color: #D2B4DE;
+  background-color: inherit;
+}
+
+#articles-title>a:hover, .links-articles>a:hover {
+  text-decoration-line: none;
+  color: #000;
+  background-color: #fff;
+}
+
+// .mdmix>a:focus {
+//   color: #FFE5CC;
+// }
+
+#navbar li a:link, #nav-box .button:link, #navbar li a:visited {
+  color: #ff0;
+  text-decoration-line: none;
+  bottom: 1vh;
+}
+
+// #navbar li #user-access:link, #nav-box .button:link, #navbar li #user-access:visited {
+//   color: orange;
+//   text-decoration-line: none;
+//   bottom: 1vh;
+// }
+
+#navbar li a:active, #navbar li a:visited {
+  color: #ff0;
+  text-decoration-line: none;
+}
+
+#navbar li a:hover, #nav-box .button:hover, #nav-box .button:active {
+  text-decoration-line: overline;
+  color: #F77E14;
+}
+
+#navbar li a:focus, #nav-box .button:focus {
+  color: #FFE5CC;
+}
+
+#nav-box>ul {
+  position: relative;
+  transform: translateY(13%);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form, .navbar-inverse {
+  border-color: #ff0;
+}
+
+// .navbar-inverse .navbar-nav>.active>a:visited, .navbar-inverse .dropdown-menu>.active>a:visited, .navbar-inverse .navbar-nav>.active>#dropdown:visited {
+//     background-color: black;
+// }
+
+#dropdownMenu1, .dropdown-menu {
+  color: #ff0;
+  background-color: #5AD4C2;
+}
+
+#dropdownMenu1 {
+  height: 63px;
+}
+
+#dropdownMenu1 span {
+  position: relative;
+  bottom: 15px;
+}
+
+.dropdown-menu>li>a {
+  height: 63px;
+  padding: 0px;
+}
+
+// .dropdown-menu>li>#stuff {
+//   padding-right: 37px;
+//   padding-left: 49px;
+// }
+//
+// .dropdown-menu>li>a:link, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+//   background-color: #5AD4C2;
+//   text-align: right;
+// }
+
+.btn-default, .btn-default:hover {
+  border-color: #5AD4C2;
+}
+
+.open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+  border-color: #F77E14;
+  border-width: 6px;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: #5AD4C2;
+}
+
+#nav-box a {
+  padding-bottom: 28px;
+}
+
+#navbar li a, #dropdownMenu1 {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  transition: 2s;
+  -webkit-transition: 2s;/* Safari */
+}
+
+.navbar-collapse {
+  padding-bottom: 39px;
+  padding-top: -20px;
+}
+
+.navbar .navbar-toggle {
+  border-color: #F77E14;
+  position: relative;
+  top: 1px;
+}
+
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #F77E14;
+  border-color: #F77E14;
+}
+
+.navbar-inverse .navbar-colapse, .navbar-inverse .navbar-form {
+  border-color: #ff0;
+  border-top: 1px solid #ff0;
+}
+
+
+/*MAIN content*/
+
+html>body {
+  height: 100%;
+  margin: 0;
+  background-color: #fff;
+  // background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+  // background-color: #fff;
+  // background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=d0d3d400&noise=17202a&density=46&opacity=46);
+  // background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=d0d3d4ff&noise=17202a&density=100&opacity=100);
+  // background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.page-wrap {
+  min-height: 100%;
+  height: auto;
+  /* equal to footer height */
+  margin-bottom: -2.5em;
+  padding-bottom: 2.5em;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+#main-jumbotron {
+  background-color: #6C3483;
+  filter: opacity(89%);
+  color: #ff0;
+  margin: 0;
+}
+
+#title-on-video {
+  display: block;
+  height: fit-content;
+}
+
+#home-title {
+  z-index: 2;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  margin-right: -15px;
+  letter-spacing: 5em;
+}
+
+#title-on-video {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  cursor: pointer;
+}
+
+#title-on-video:before {
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #F1C40F69;
+  -moz-transition: background-color .5s ease;
+  -webkit-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+#title-on-video:hover:before {
+  background: none;
+}
+
+.home-videos {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #fff;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.all-videos {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#home-video-left, #home-video-center, #home-video-right {
+  filter: opacity(0.96) saturate(100%) blur(2px);
+  max-width: 100%;
+}
+
+#sub-jumbotron {
+  background-color: #6C3483;
+  clear: both;
+  color: #ff0;
+}
+
+#new-articles, #new-articles>a {
+  color: #fff;
+  text-align: center;
+  z-index: 500;
+  display: none;
+}
+
+.new-jumbotron {
+  background-color: #000;
+  margin-bottom: 0;
+  width: 64%;
+  margin: 0 auto;
+}
+
+.line-breaks {
+  border-width: 0.9em;
+  border-color: #ff0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.articles-overview {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.articles-display {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.articles-details {
+  width: 93%;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+.articles-background {
+  width: 64%;
+  margin: 6vw auto;
+  background-color: #6C3483;
+}
+
+#articles-title, .links-articles {
+  color: #ff0;
+}
+
+#articles-title, #articles-preview, #articles-time, #articles-contributor, .newly-created, #articles-momentum {
+  width: 74%;
+  margin: 0 auto;
+}
+
+.newly-created>#articles-contributor {
+  color: #000;
+}
+
+#articles-preview, .newly-created {
+  color: #fff;
+}
+
+#articles-site {
+  line-height: 1.6;
+  color: #6C3483;
+  letter-spacing: 0.26em;
+}
+
+.articles-pix {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contributor-jumbotron, #momentum-jumbotron {
+  background-color: #fff;
+  padding-top: 0.49em;
+  padding-bottom: 0.1em;
+}
+
+.contributor-jumbotron {
+  background-color: #fff;
+  padding-top: 0.49em;
+  padding-bottom: 0.7em;
+}
+
+.article-info-background {
+  background-color: #000;
+  width: 63%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newly-created {
+  // padding-top: 1em;
+  // padding-bottom: 0.5em;
+  white-space: pre-wrap;
+  line-height: 1.1;
+}
+
+#titles-frame {
+  padding-top: 3em;
+}
+
+#articles-momentum {
+  // color: #6C3483;
+  color: #000;
+  background-color: #fff;
+  letter-spacing: 0.6em;
+  // line-height: 1.6;
+  // white-space: pre-wrap;
+  padding-top: 0.36em;
+  padding-bottom: 0.1em;
+}
+
+.edit-articles, .delete-articles {
+  display: none;
+}
+
+h1, h2, h3, p, footer {
+  color: #ff0;
+  text-align: center;
+}
+
+footer, .page-wrap:after {
+  height: 2.5em;
+}
+
+footer {
+  background: #000;
+  display: table;
+  z-index: 500;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 100%;
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+/* Typography */
+
+// .nav a, #dropdownMenu1 {
+//   font-family: 'Monofett', Arial Black, Impact, sans-serif;
+//   font-size: calc(1.9em + 1.3vw);
+// }
+
+.mdmix>a {
+  font-size: calc(0.6em + 2.3vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-weight: 900;
+}
+
+#articles-site {
+  font-size: calc(0.4em + 0.9vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-weight: 900;
+}
+
+#main-jumbotron>h1 {
+  font-size: calc(2.6em + 3.3vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-weight: 900;
+}
+
+#home-title>h1 {
+  font-size: calc(1.6em + 2.4vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-weight: 900;
+}
+
+h2, #articles-momentum {
+  font-size: calc(1.3em + 1.9vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: calc(0.7em + 1.5vw);
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+}
+
+#articles-contributor {
+  font-size: calc(0.4em + 1.1vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
+.links-articles {
+  font-size: calc(0.4em + 0.9vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
+#new-articles {
+  font-size: calc(1.1em + 1.6vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
+#articles-title {
+  font-size: calc(0.6em + 1.1vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
+#articles-preview, .newly-created {
+  font-family: 'Fira Mono', Cambria, Gill sans, sans-serif;
+  font-size: calc(0.4em + 0.8vw);
+}
+
+#articles-time {
+  font-size: calc(0.3em + 0.7vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.29em;
+}
+
+footer {
+  font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
+  font-size: 1.3em;
+}
+
+
+/* code-combination to change nabvar breakpoint */
+@media (max-width: 1435px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+// media queries
+
+@media (max-width: 768px) {
+  #home-title {
+    letter-spacing: 1.3em;
+  }
+}

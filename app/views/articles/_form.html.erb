@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :momentum %>
+    <%= form.text_field :momentum %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.label :preview %>
+    <%= form.text_area :preview %>
   </div>
 
   <div class="field">
-    <%= form.label :contributor %>
-    <%= form.text_field :contributor %>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
   </div>
 
   <div class="field">
@@ -34,6 +39,16 @@
   <div class="field">
     <%= form.label :time %>
     <%= form.datetime_select :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :site %>
+    <%= form.text_field :site %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contributor %>
+    <%= form.text_field :contributor %>
   </div>
 
   <div class="actions">

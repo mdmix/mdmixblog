@@ -1,29 +1,75 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<section class="article-info-background" data-article-id="<%= @article.id %>">
+
+  <p class="newly-created">
+    <span id="articles-image_url"><%= image_tag(@article.image_url, class: "img-zoom img-responsive articles-pix", data_zoom_image: 'image_tag(@article.big_image_url)' ) unless @article.image_url.nil? %></span>
+    <!-- also possible: 'image_tag(@article.image_url(:large))' -->
+  </p>
+
+  <hr class="pix-lines">
+
+  <p class="newly-created jumbotron momentum-jumbotron" id="momentum-jumbotron">
+    <span id="articles-momentum"><%= @article.momentum %></span>
+  </p>
+
+  <p class="newly-created" id="titles-frame">
+    <span id="articles-title"><%= @article.title %></span>
+  </p>
+
+  <p class="newly-created">
+    <span id="articles-content"><%= @article.content %></span>
+  </p>
+
+  <p class="newly-created">
+    <span id="articles-time"><%= @article.time %></span>
+  </p>
+
+  <p class="newly-created jumbotron contributor-jumbotron">
+    <span id="articles-site"><%= @article.site %></span>
+    <span id="articles-contributor">by <%= @article.contributor %></span>
+  </p>
+  <br></br>
+  <span class="links-articles edit-articles">
+  <%= link_to 'Edit', edit_article_path(@article) %>
+  </span>
+  &nbsp;&nbsp;&nbsp;<span class="links-articles">
+  <%= link_to 'Back', articles_path %>
+  </span>
+  <br></br>
+
+</section>
+
+
+<!--
+Backup
+ -->
+<!-- <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <#%= @article.title %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Contributor:</strong>
-  <%= @article.contributor %>
+  <#%= @article.content %>
 </p>
 
 <p>
   <strong>Image url:</strong>
-  <%= @article.image_url %>
+  <#%= @article.image_url %>
 </p>
 
 <p>
   <strong>Time:</strong>
-  <%= @article.time %>
+  <#%= @article.time %>
 </p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<p>
+  <strong>Site:</strong>
+  <#%= @article.contributor %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <#%= @article.contributor %>
+</p> -->
