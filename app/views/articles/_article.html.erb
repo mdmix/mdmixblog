@@ -13,13 +13,13 @@
     <p id="articles-time"><%= article.time %><br><span><i>'Berlin' zone</i></span></p>
     <br>
     <strong><p class="jumbotron contributor-jumbotron" id="articles-contributor"><span id="articles-site"><%= article.site %></span><br>by <%= article.contributor %></p></strong>
-    <br></br>
-    <br>
+    <br class="titles-spread"></br>
+    <br class="titles-spread">
     <span class="links-articles"><%= link_to 'Show', article %></span>
-    &nbsp;&nbsp;&nbsp;<span class="links-articles edit-articles"><%= link_to 'Edit', edit_article_path(article) %></span>
-    &nbsp;&nbsp;&nbsp;<span class="links-articles delete-articles"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    <br></br>
-    <br></br>
+    <span class="links-articles edit-articles"><%= link_to 'Edit', edit_article_path(article) %></span>
+    <span class="links-articles delete-articles"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    <br class="titles-spread"></br>
+    <br class="titles-spread"></br>
   </div><!-- end articles-background -->
 <% end %>
 </div><!-- /col -->

@@ -447,13 +447,13 @@ footer span {
 }
 
 #main-jumbotron>h1 {
-  font-size: calc(2.6em + 3.3vw);
+  font-size: calc(2.9em + 3.9vw);
   font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
   font-weight: 900;
 }
 
 #home-title>h1 {
-  font-size: calc(1.6em + 2.4vw);
+  font-size: calc(2.4em + 2.9vw);
   font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
   font-weight: 900;
 }
@@ -551,6 +551,54 @@ footer {
 }
 
 // media queries
+
+@media (min-width: 320px) and (max-width: 375px) {
+  #main-jumbotron, #sub-jumbotron {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #home-title > h1 {
+    font-size: calc(1.6em + 1.9vw);
+    position: relative;
+    bottom: 1em;
+  }
+  .new-jumbotron, .articles-background {
+    width: 89%;
+  }
+  #new-articles>a, #articles-title>a {
+    left: 0;
+  }
+  #articles-momentum {
+    font-size: calc(0.9em + 1.3vw);
+    letter-spacing: 0.3em;
+  }
+  #articles-preview {
+    font-size: calc(0.4em + 1.6vw);
+    line-height: 1.2;
+  }
+  #articles-time {
+    font-size: calc(0.4em + 0.9vw);
+  }
+  #articles-contributor {
+    font-size: calc(0.6em + 1.2vw);
+  }
+  #articles-site {
+    font-size: calc(0.8em + 1.2vw);
+  }
+  .titles-spread {
+    display: none;
+  }
+  .links-articles {
+    margin: 0 auto;
+    font-size: calc(0.5em + 0.9vw)
+  }
+  .links-articles>a {
+    left: 0;
+  }
+  .article-info-background {
+    width: 89%;
+  }
+}
 
 @media (max-width: 768px) {
   #home-title {
