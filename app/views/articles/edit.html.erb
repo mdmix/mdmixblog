@@ -1,6 +1,13 @@
-<h1>Editing Article</h1>
+<br>
+<br>
+
+<h2 id="editing-title" %>Editing Article</h2>
 
 <%= render 'form', article: @article %>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+<div class="links-articles-form">
+  <%= link_to 'Show', @article, :class => "links-edit"  %> |
+  <%= link_to 'Back', articles_path, :class => "links-edit"  %>
+</div>
+
+<br>

@@ -1,4 +1,4 @@
-<%= form_with(model: article, local: true) do |form| %>
+<%= form_with(model: article, local: true, id:"edit-articles") do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= form.label :momentum %>
-    <%= form.text_field :momentum %>
+    <%= form.text_field :momentum, :class => "edit-boxes" %>
   </div>
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :class => "edit-boxes" %>
   </div>
 
   <div class="field">
     <%= form.label :preview %>
-    <%= form.text_area :preview %>
+    <%= form.text_area :preview, :class => "edit-content" %>
   </div>
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, :class => "edit-content" %>
   </div>
 
   <div class="field">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+    <%= form.text_field :image_url, :class => "edit-boxes" %>
   </div>
 
   <div class="field">
@@ -43,12 +43,12 @@
 
   <div class="field">
     <%= form.label :site %>
-    <%= form.text_field :site %>
+    <%= form.text_field :site, :class => "edit-boxes" %>
   </div>
 
   <div class="field">
     <%= form.label :contributor %>
-    <%= form.text_field :contributor %>
+    <%= form.text_field :contributor, :class => "edit-boxes" %>
   </div>
 
   <div class="actions">
