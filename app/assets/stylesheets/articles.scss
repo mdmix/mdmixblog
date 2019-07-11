@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*NAVBAR LOOK*/
+/*NAVBAR + LOGIN LOOKS*/
 
 // * { box-sizing: border-box; }
 //
@@ -62,7 +62,7 @@
 // }
 
 #navbar li a:link, #nav-box .button:link, #navbar li a:visited {
-  color: #ff0;
+  color: #D2B4DE;
   text-decoration-line: none;
   bottom: 1vh;
 }
@@ -74,13 +74,13 @@
 // }
 
 #navbar li a:active, #navbar li a:visited {
-  color: #ff0;
+  color: #6C3483;
   text-decoration-line: none;
 }
 
 #navbar li a:hover, #nav-box .button:hover, #nav-box .button:active {
   text-decoration-line: overline;
-  color: #F77E14;
+  color: #6C3483;
 }
 
 #navbar li a:focus, #nav-box .button:focus {
@@ -175,6 +175,13 @@
   border-top: 1px solid #ff0;
 }
 
+.user-porthole {
+  list-style-type: none;
+}
+
+.nav-link {
+
+}
 
 /*MAIN content*/
 
