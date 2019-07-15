@@ -38,28 +38,27 @@
             </button> -->
             <div class="mdmix navbar-brand">
               <%= link_to "MAIN", root_path %>
+              <!-- <span class="separator">|</span> -->
+              <!-- <span><hr id="menu-separator"></span> -->
             </div><!--end mdmix -->
-          </div><!-- navbar header -->
-          <div class="navbar-collapse collapse nav-box" id="nav-box">
-            <!-- <ul class="nav navbar-nav navbar-right"> -->
-              <!-- <li><#%= link_to "About", simple_pages_about_path %></li> -->
-              <!-- <li><#%= link_to "Contact", simple_pages_contact_path %></li> -->
-              <!-- <li><#%= link_to "Slideshow", simple_pages_landing_page_path %></li> -->
-              <!-- <li><#%= link_to "Orders", orders_path %></li> -->
-            <!-- </ul> -->
-            <ul class="navbar-nav ml-auto user-porthole">
+            <ul class="navbar-nav user-porthole">
               <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link user-login") %>
               </li>
               <% else %>
               <li class="nav-item">
-                <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+                <%= link_to('Login', new_user_session_path, class: "nav-link user-login") %>
               </li>
               <% end %>
             </ul>
-          </div><!-- end nav -->
-        </div><!-- end nav container -->
+          </div><!-- navbar header -->
+          <!-- <div class="navbar-collapse collapse nav-box" id="nav-box"> -->
+            <!-- <ul class="nav navbar-nav navbar-right"> -->
+
+            <!-- </ul> -->
+          <!-- </div><!-- end nav -->
+        <!-- </div><!-- end nav container -->
       </nav><!-- end navbar-->
       <div class="anchor">
       </div>

@@ -64,7 +64,8 @@
 #navbar li a:link, #nav-box .button:link, #navbar li a:visited {
   color: #D2B4DE;
   text-decoration-line: none;
-  bottom: 1vh;
+  bottom: 1em;
+  background-color: #6C3483;
 }
 
 // #navbar li #user-access:link, #nav-box .button:link, #navbar li #user-access:visited {
@@ -74,12 +75,12 @@
 // }
 
 #navbar li a:active, #navbar li a:visited {
-  color: #6C3483;
+  color: #ff0;
   text-decoration-line: none;
 }
 
 #navbar li a:hover, #nav-box .button:hover, #nav-box .button:active {
-  text-decoration-line: overline;
+  text-decoration-line: none;
   color: #6C3483;
 }
 
@@ -149,8 +150,8 @@
 #navbar li a, #dropdownMenu1 {
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  transition: 2s;
-  -webkit-transition: 2s;/* Safari */
+  transition: 1s;
+  -webkit-transition: 1s;/* Safari */
 }
 
 .navbar-collapse {
@@ -177,11 +178,28 @@
 
 .user-porthole {
   list-style-type: none;
+  display: inline-block;
 }
 
-.nav-link {
-
+.user-login {
+  position: relative;
+  top: 0.76em;
 }
+
+.navbar-nav>li>a {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+// #menu-separator {
+//   position: relative;
+//   top: 3em;
+//   width: 1px;
+//   height: 100px;
+//   border-color: black;
+//   background-color: black;
+// }
+
 
 /*MAIN content*/
 
@@ -212,7 +230,7 @@ html>body {
 
 #main-jumbotron {
   background-color: #6C3483;
-  filter: opacity(89%);
+  filter: opacity(100%);
   color: #ff0;
   margin: 0;
 }
@@ -468,6 +486,12 @@ footer span {
   font-weight: 900;
 }
 
+.user-login {
+  font-size: calc(0.4em + 1.4vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
 #articles-site {
   font-size: calc(0.4em + 0.9vw);
   font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
@@ -584,9 +608,34 @@ footer {
 
 // media queries
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 424px) {
   .newly-created>#articles-content {
     font-size: calc(0.9em + 1.6vw);
+  }
+  #home-title > h1 {
+    font-size: calc(1.6em + 1.9vw);
+    position: relative;
+    bottom: 1em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  #navbar li a:link, #navbar li a:visited {
+    background-color: #ff0;
+    color: #6C3483;
+    font-weight: 900;
+    font-size: calc(0.6em + 1.6vw);
+  }
+  #navbar li a:hover {
+    text-decoration-line: overline;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 475px) {
+  #home-title > h1 {
+    font-size: calc(2.4em + 2.9vw);
+    position: relative;
+    bottom: 1em;
   }
 }
 
@@ -597,11 +646,6 @@ footer {
   }
   #home-title {
     letter-spacing: 1.3em;
-  }
-  #home-title > h1 {
-    font-size: calc(1.6em + 1.9vw);
-    position: relative;
-    bottom: 1em;
   }
   .new-jumbotron, .articles-background {
     width: 89%;
@@ -663,35 +707,64 @@ footer {
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
+  .user-login {
+    position: relative;
+    top: 0.59em;
+  }
+  #navbar li a:link, #navbar li a:visited {
+    background-color: #ff0;
+    color: #6C3483;
+    font-weight: 900;
+    font-size: calc(0.6em + 1.6vw);
+  }
+  #navbar li a:hover {
+    text-decoration-line: overline;
+  }
   .newly-created>#articles-content {
     font-size: calc(0.6em + 1.3vw);
   }
 }
 
 @media (min-width: 769px) {
-    #home-title>h1 {
-      font-size: calc(2.3em + 2.9vw);
-      position: relative;
-      bottom: 0.4em;
-    }
-    #articles-momentum {
-      font-size: calc(1.2em + 1.7vw);
-      letter-spacing: 0.4em;
-    }
-    #articles-contributor {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    #articles-site {
-      font-size: calc(0.7em + 1vw);
-    }
-    .newly-created>#articles-title {
-      font-size: calc(0.7em + 1.3vw);
-    }
+  .user-login {
+    position: relative;
+    top: 0.57em;
   }
+  #home-title>h1 {
+    font-size: calc(2.3em + 2.9vw);
+    position: relative;
+    bottom: 0.4em;
+  }
+  #articles-momentum {
+    font-size: calc(1.2em + 1.7vw);
+    letter-spacing: 0.4em;
+  }
+  #articles-contributor {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #articles-site {
+    font-size: calc(0.7em + 1vw);
+  }
+  .newly-created>#articles-title {
+    font-size: calc(0.7em + 1.3vw);
+  }
+}
 
 @media (min-width: 1440px) {
-    .newly-created>#articles-content {
-      font-size: calc(0.3em + 0.7vw);
-    }
+  .newly-created>#articles-content {
+    font-size: calc(0.3em + 0.7vw);
+  }
+  .user-login {
+    position: relative;
+    top: 0.76em;
+    // padding-bottom: 1em;
+  }
+}
+
+@media (min-width: 1440px) and (max-width:1445px) {
+  .navbar-nav > li > a {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+  }
 }
