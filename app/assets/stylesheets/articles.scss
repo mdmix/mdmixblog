@@ -187,8 +187,8 @@
 }
 
 .navbar-nav>li>a {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.19em;
+  padding-bottom: 0.19em;
 }
 
 // #menu-separator {
@@ -226,6 +226,27 @@ html>body {
 .page-wrap:after {
   content: "";
   display: block;
+}
+
+.alerts-notices {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.alert-warning, .alerts-notices>#notice {
+  background-color: #F77E14;
+  color: #6C3483;
+  position: fixed;
+  width: 30em;
+  left: 50%;
+  margin-left: -15em;
+  top: 0.06em;
+  // padding: 0;
+}
+
+.alerts-notices {
+  position: relative;
+  z-index: 999;
 }
 
 #main-jumbotron {
@@ -425,8 +446,8 @@ html>body {
   padding-bottom: 0.1em;
 }
 
-#editing-title {
-  color: black;
+#editing-title, #users-together, .users-details {
+  color: #000;
 }
 
 #edit-articles, .links-articles-form {
@@ -510,7 +531,7 @@ footer span {
   font-weight: 900;
 }
 
-h2, #articles-momentum, #editing-title {
+h2, #articles-momentum, #editing-title, #users-together {
   font-size: calc(1.3em + 1.9vw);
   font-family: 'Josefin Sans', Cambria, Gill Sans, sans-serif;
   font-weight: 900;
@@ -527,8 +548,14 @@ h3 {
   font-weight: 900;
 }
 
-.links-articles {
+.links-articles, .users-details {
   font-size: calc(0.4em + 0.9vw);
+  font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
+  font-weight: 900;
+}
+
+.alert-warning, .alerts-notices>#notice {
+  font-size: calc(1.1em + 1.4vw);
   font-family: 'Arvo', Rockwell, Arial Black, sans-serif;
   font-weight: 900;
 }

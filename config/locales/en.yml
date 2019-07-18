@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  unauthorized:
+    default: "Only Admins can make changes"

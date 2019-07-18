@@ -65,6 +65,16 @@
       <br>
       <br>
 
+      <div class="alerts-notices">
+      <% if alert %>
+        <p class="alert alert-warning"><%= alert %></p>
+      <% end %>
+
+      <% if notice %>
+        <p id="notice" class="alert alert-warning"><%= notice %></p>
+      <% end %>
+      </div>
+
       <%= yield %>
 
     </main>
