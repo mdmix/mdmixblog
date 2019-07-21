@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
   # GET /articles
   # GET /articles.json
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'The article is up.' }
+        format.html { redirect_to @article, notice: 'The article is up' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'The new version is up.' }
+        format.html { redirect_to @article, notice: 'The new version is up' }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }

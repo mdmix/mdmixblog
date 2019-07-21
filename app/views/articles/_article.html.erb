@@ -1,7 +1,11 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articles-display">
+
 <% cache article do %>
+
   <div class="articles-background">
+
     <br></br>
+
     <%= image_tag(article.image_url, class: "img-responsive articles-pix") unless article.image_url.nil? %>
     <br>
     <h3 class="jumbotron momentum-jumbotron" id="articles-momentum">&nbsp;<%= article.momentum %></h3>
@@ -13,13 +17,20 @@
     <p id="articles-time"><%= article.time %><br><span><i>'Berlin' zone</i></span></p>
     <br>
     <strong><p class="jumbotron contributor-jumbotron" id="articles-contributor"><span id="articles-site"><%= article.site %></span><br><span id="articles-author">by&nbsp;<%= article.contributor %></span></p></strong>
+
     <br class="titles-spread"></br>
     <br class="titles-spread">
-    <span class="links-articles show-articles"><%= link_to 'Show', article %></span>
-    <span class="links-articles edit-articles"><%= link_to 'Edit', edit_article_path(article) %></span>
-    <span class="links-articles delete-articles"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+
+      <span class="links-articles show-articles"><%= link_to 'Show', article %></span>
+    <% if signed_in? && current_user.admin? %>
+      <span class="links-articles edit-articles"><%= link_to 'Edit', edit_article_path(article) %></span>
+      <span class="links-articles delete-articles"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    <% end %>
+
     <br class="titles-spread"></br>
     <br class="titles-spread"></br>
+
   </div><!-- end articles-background -->
+
 <% end %>
 </div><!-- /col -->

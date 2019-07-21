@@ -1,18 +1,19 @@
-# class Ability
-#   include CanCan::Ability
-#
-#   def initialize(user)
-#     user ||= User.new # guest user (not logged in)
-#     if user.admin?  # additional permissions for administrators
-#       can :manage, :all
-#       # can :destroy, :all
-#     else
-#       can :read, Article
-#       can :manage, User, id: user.id
-#       # can :manage, Article, :user_id => user.id
-#       cannot :destroy, :all
-#     end
-#   end
+class Ability
+  include CanCan::Ability
+
+  def initialize(user)
+    user ||= User.new # guest user (not logged in)
+    if user.admin?  # additional permissions for administrators
+      can :manage, :all
+      can :destroy, :all
+    else
+      can [:show, :index], Article
+      can :manage, User, id: user.id
+      # can :manage, Article, :user_id => user.id
+      cannot :destroy, :all
+    end
+  end
+end
 
     # Define abilities for the passed in user here. For example:
     #
@@ -40,5 +41,3 @@
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end
-end

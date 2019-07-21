@@ -29,13 +29,18 @@
     <span id="articles-site"><%= @article.site %></span>
     <span id="articles-contributor">by <%= @article.contributor %></span>
   </p>
+
   <br></br>
-  <span class="links-articles edit-articles">
-  <%= link_to 'Edit', edit_article_path(@article) %>
-  </span>
-  &nbsp;&nbsp;&nbsp;<span class="links-articles">
-  <%= link_to 'Back', articles_path %>
-  </span>
+
+  <% if signed_in? && current_user.admin? %>
+    <span class="links-articles edit-articles">
+      <%= link_to 'Edit', edit_article_path(@article) %>
+    </span>
+  <% end %>
+    &nbsp;&nbsp;&nbsp;<span class="links-articles">
+      <%= link_to 'Back', articles_path %>
+    </span>
+
   <br></br>
 
 </section>
