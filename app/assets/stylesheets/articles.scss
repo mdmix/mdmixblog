@@ -463,6 +463,7 @@ html>body {
   width: 63%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 6em;
   // filter: saturate(400) blur(39px);
   // -moz-transition: filter 2s ease;
   // -webkit-transition: filter 2s ease;
@@ -474,7 +475,7 @@ html>body {
 //   filter: none;
 // }
 
-.articles-pix {
+.articles-background>.articles-pix {
   filter: grayscale(100%) blur(39px);
   -moz-transition: filter 1s ease;
   -webkit-transition: filter 1s ease;
@@ -482,7 +483,7 @@ html>body {
   transition: filter 1s ease;
 }
 
-.articles-pix:hover {
+.articles-background>.articles-pix:hover {
   filter: none;
 }
 
