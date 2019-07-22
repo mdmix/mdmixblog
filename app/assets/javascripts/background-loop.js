@@ -1,17 +1,22 @@
 $(document).ready(function () {
 
     function slider(){
-        $('#main-page').delay(10000).fadeOut(100, function() {
-            $('#main-page').css("background-image", "url(http://api.thumbr.it/whitenoise-361x370.png?background=d0d3d400&noise=17202a&density=46&opacity=46)");
-            $('#main-page').fadeIn(100, function() {
-                $('#main-page').delay(10000).fadeOut(100, function() {
+        $('#main-page').delay(12500).fadeOut(0, function() {
+            $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/subtle-white-feathers.png)");
+            $('#main-page').fadeIn(0, function() {
+                $('#main-page').delay(12500).fadeOut(0, function() {
                     $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/asfalt-dark.png)");
-                    $('#main-page').fadeIn(100, slider);
+            $('#main-page').fadeIn(0, function() {
+                $('#main-page').delay(12500).fadeOut(0, function() {
+                    $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/arabesque.png)");
+            $('#main-page').fadeIn(0, slider);
                 });
             });
         });
+      });
+  });
 
-    }
+}
     slider();
 });
 

@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<section class="article-info-background" data-article-id="<%= @article.id %>">
+<section class="actual-articles-background" data-article-id="<%= @article.id %>">
 
-  <p class="newly-created">
+  <p class="newly-created articles-pix">
     <span id="articles-image_url"><%= image_tag(@article.image_url, class: "img-zoom img-responsive articles-pix", data_zoom_image: 'image_tag(@article.big_image_url)' ) unless @article.image_url.nil? %></span>
     <!-- also possible: 'image_tag(@article.image_url(:large))' -->
   </p>
 
   <hr class="pix-lines">
 
+  <section class="articles-framed">
   <p class="newly-created jumbotron momentum-jumbotron" id="momentum-jumbotron">
     <span id="articles-momentum"><%= @article.momentum %></span>
   </p>
@@ -40,6 +41,8 @@
     &nbsp;&nbsp;&nbsp;<span class="links-articles">
       <%= link_to 'Back', articles_path %>
     </span>
+
+  </section>
 
   <br></br>
 

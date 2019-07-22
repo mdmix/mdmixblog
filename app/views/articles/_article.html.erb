@@ -8,6 +8,7 @@
 
     <%= image_tag(article.image_url, class: "img-responsive articles-pix") unless article.image_url.nil? %>
     <br>
+    <section class="articles-framed">
     <h3 class="jumbotron momentum-jumbotron" id="articles-momentum">&nbsp;<%= article.momentum %></h3>
     <br>
     <h3 id="articles-title"><%= link_to "#{article.title}", article %></h3>
@@ -17,6 +18,7 @@
     <p id="articles-time"><%= article.time %><br><span><i>'Berlin' zone</i></span></p>
     <br>
     <strong><p class="jumbotron contributor-jumbotron" id="articles-contributor"><span id="articles-site"><%= article.site %></span><br><span id="articles-author">by&nbsp;<%= article.contributor %></span></p></strong>
+    </section>
 
     <br class="titles-spread"></br>
     <br class="titles-spread">
