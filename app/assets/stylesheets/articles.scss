@@ -233,7 +233,8 @@ html>body {
 // }
 
 .page-wrap {
-  min-height: 100%;
+  // position: relative;
+  min-height: 100vh;
   height: auto;
   /* equal to footer height */
   margin-bottom: -2.5em;
@@ -577,6 +578,7 @@ h1, h2, h3, p, footer {
 // }
 
 footer {
+  // bottom: 0;
   height: 2.5em;
   background: #000;
   display: table;
