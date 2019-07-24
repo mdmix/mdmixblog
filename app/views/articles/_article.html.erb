@@ -24,10 +24,14 @@
     <br class="titles-spread">
 
       <span class="links-articles show-articles"><%= link_to 'Show', article %></span>
-      
+
     <% if signed_in? && current_user.admin? %>
-      <span class="links-articles edit-articles"><%= link_to 'Edit', edit_article_path(article) %></span>
-      <span class="links-articles delete-articles"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <span class="links-articles edit-articles">
+        <%= link_to 'Edit', edit_article_path(article) %>
+      </span>
+      <span class="links-articles delete-articles">
+        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </span>
     <% end %>
 
     <br class="titles-spread"></br>
