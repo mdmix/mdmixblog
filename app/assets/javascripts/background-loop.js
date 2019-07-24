@@ -1,13 +1,13 @@
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
 
     function slider(){
-        $('#main-page').delay(12500).fadeOut(0, function() {
+        $('#main-page').delay(5500).fadeOut(0, function() {
             $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/subtle-white-feathers.png)");
             $('#main-page').fadeIn(0, function() {
-                $('#main-page').delay(12500).fadeOut(0, function() {
+                $('#main-page').delay(5500).fadeOut(0, function() {
                     $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/asfalt-dark.png)");
             $('#main-page').fadeIn(0, function() {
-                $('#main-page').delay(12500).fadeOut(0, function() {
+                $('#main-page').delay(5500).fadeOut(0, function() {
                     $('#main-page').css("background-image", "url(https://www.transparenttextures.com/patterns/arabesque.png)");
             $('#main-page').fadeIn(0, slider);
                 });
